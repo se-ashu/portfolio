@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashutosh Kumar | Python Developer</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      /* ================= HERO SECTION ================= */
+
+      header {
+        height: 100vh;
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 48px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #38bdf8, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      header p {
+        margin-top: 15px;
+        font-size: 20px;
+        color: #94a3b8;
+      }
+
+      /* ================= NAVBAR ================= */
+
+      nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        text-align: center;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      nav a {
+        color: #e2e8f0;
+        margin: 0 18px;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #38bdf8;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* ================= SECTIONS ================= */
+
+      section {
+        padding: 100px 10%;
+      }
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+        color: #38bdf8;
+        text-align: center;
+      }
+
+      /* ================= CARD ================= */
+
+      .card {
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        transition: 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      }
+
+      /* ================= SKILLS ================= */
+
+      .skills span {
+        display: inline-block;
+        background: #0f172a;
+        border: 1px solid #334155;
+        padding: 8px 16px;
+        margin: 8px;
+        border-radius: 30px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .skills span:hover {
+        background: #38bdf8;
+        color: #0f172a;
+        transform: scale(1.05);
+      }
+
+      /* ================= PROJECT GRID ================= */
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .project-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      /* ================= BUTTON ================= */
+
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 18px;
+        background: linear-gradient(90deg, #38bdf8, #6366f1);
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+      }
+
+      /* ================= CONTACT ================= */
+
+      .contact-box {
+        text-align: center;
+      }
+
+      .contact-box button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: none;
+        background: #38bdf8;
+        color: #0f172a;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .contact-box button:hover {
+        background: #6366f1;
+        color: white;
+      }
+
+      /* ================= FOOTER ================= */
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #020617;
+        font-size: 14px;
+        color: #94a3b8;
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 36px;
+        }
+
+        section {
+          padding: 80px 6%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+      <h1>Ashutosh Kumar</h1>
+      <p>Python Developer | OOP Enthusiast | Backend Learner</p>
+    </header>
+
+    <section id="about">
+      <h2>Professional Summary</h2>
+      <div class="card">
+        Computer Science graduate with strong foundation in Python, OOP, Data
+        Structures, and real-world project development. Built AI-powered
+        Tic-Tac-Toe (Minimax), Online Banking System, Library Management System,
+        and Pharma Sales application. Passionate about backend development and
+        scalable systems.
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <strong>B.Tech in Computer Science</strong><br />
+        Rajasthan Institute of Engineering and Technology, Jaipur<br />
+        2025 | 60.8%
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="card skills">
+        <span>Python</span>
+        <span>OOP</span>
+        <span>Data Structures</span>
+        <span>File Handling</span>
+        <span>Tkinter</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>MySQL</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <div class="project-title">Tic-Tac-Toe AI (Minimax)</div>
+          Tkinter GUI with multi-level AI including unbeatable Minimax logic.
+          <br />
+          <a
+            class="btn"
+            href="https://github.com/se-ashu/tic-tac-toe"
+            target="_blank"
+            >View Code</a
+          >
+        </div>
+
+        <div class="card">
+          <div class="project-title">Online Banking System</div>
+          Account management system with file persistence & exception handling.
+          <br />
+          <a
+            class="btn"
+            href="https://github.com/se-ashu/online-banking-system"
+            target="_blank"
+            >View Code</a
+          >
+        </div>
+
+        <div class="card">
+          <div class="project-title">Library Management</div>
+          OOP-based console system for managing books & transactions.
+          <br />
+          <a
+            class="btn"
+            href="https://github.com/se-ashu/library_management_system"
+            target="_blank"
+            >View Code</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card contact-box">
+        Email: ashu.kr.97@gmail.com <br />
+        GitHub: github.com/se-ashu <br />
+        <button onclick="alert('Thank you for visiting! Let’s connect.')">
+          Connect With Me
+        </button>
+      </div>
+    </section>
+
+    <footer>© 2026 Ashutosh Kumar | Built with HTML, CSS & JavaScript</footer>
+  </body>
+</html>
